@@ -1,0 +1,44 @@
+{
+  "flights": [
+    {
+      "number": "5693",
+      "origin": "RDU",
+      "departure": "2019-03-20T11:00",
+      "destination": "DEN",
+      "arrival": "2019-03-20T13:01:35",
+      "price": 107364
+    },
+    {
+      "number": "3467",
+      "origin": "SLC",
+      "departure": "2019-03-23T06:03",
+      "destination": "MSP",
+      "arrival": "2019-03-23T10:00",
+      "price": 72032
+    },
+    {
+      "number": "1047",
+      "origin": "ATL",
+      "departure": "2019-04-21T05:00",
+      "destination": "SAN",
+      "arrival": "2019-04-21T09:32",
+      "price": 34213
+    },
+    {
+      "number": "5689",
+      "origin": "RDU",
+      "departure": "2019-04-21T20:55",
+      "destination": "STL",
+      "arrival": "2019-04-21T23:24",
+      "price": 26154
+    },
+    {
+      "number": "2478",
+      "origin": "STL",
+      "departure": "2019-05-21T12:45",
+      "destination": "RDU",
+      "arrival": "2019-05-21T16:24",
+      "price": 34313
+    }
+  ]
+}
