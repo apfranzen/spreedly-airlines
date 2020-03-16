@@ -53,10 +53,10 @@ function FlightDeck({ token, setToken, setPaymentMethod, retain, setErrors }) {
     });
   };
 
-  async function charge(paymentMethod, flight, token) {
+  async function purchase(paymentMethod, flight, token) {
     const { price } = flight;
 
-    const res = await fetchSpreedly("/charge", "POST", {
+    const res = await fetchSpreedly("/purchase", "POST", {
       token,
       paymentMethod,
       price,
@@ -121,7 +121,7 @@ function FlightDeck({ token, setToken, setPaymentMethod, retain, setErrors }) {
               flight,
               handlePurchase,
               booked: reservations.includes(flight.number),
-              charge,
+              purchase,
               deliver,
               token,
               retain

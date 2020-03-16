@@ -1,7 +1,7 @@
 import React from "react";
 import { parseDate, toDollars } from "./helpers";
 
-function Flight({ flight, booked, handlePurchase, charge, deliver, token }) {
+function Flight({ flight, booked, handlePurchase, purchase, deliver, token }) {
   return (
     <div style={{ gridRow: 2, display: "contents" }}>
       <div style={{ gridColumn: 1 }}>{flight.number}</div>
@@ -15,7 +15,7 @@ function Flight({ flight, booked, handlePurchase, charge, deliver, token }) {
           "Purchased!"
         ) : (
           <>
-            <button onClick={e => handlePurchase(charge, flight, token)}>
+            <button onClick={e => handlePurchase(purchase, flight, token)}>
               Buy
             </button>
             <button onClick={e => handlePurchase(deliver, flight, token)}>
