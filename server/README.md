@@ -42,7 +42,7 @@ I, then, make a request with that token to `deliver`
 auth and capture
 
 GET /api/flights
-POST /api/charge -- id token paymentMethod
+POST /api/purchase -- id token paymentMethod
 POST /api/retain -- token
 POST /api/deliver -- id token
 GET /api/transactions

@@ -7,7 +7,7 @@ require("dotenv").config();
 
 app.use(bodyParser.json());
 
-app.post("/api/charge", (req, res) => {
+app.post("/api/purchase", (req, res) => {
   const {
     body: {
       token,
