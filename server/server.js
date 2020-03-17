@@ -16,7 +16,7 @@ app.post("/api/purchase", (req, res) => {
     }
   } = req;
   useApi(
-    `https://core.spreedly.com/v1/gateways/${process.env.APP_TOKEN}/purchase.json`,
+    `https://core.spreedly.com/v1/gateways/${process.env.GATEWAY_TOKEN}/purchase.json`,
     "post",
     {
       transaction: {
@@ -60,12 +60,12 @@ app.post("/api/deliver", (req, res) => {
   } = req;
 
   useApi(
-    `https://core.spreedly.com/v1/receivers/${process.env.APP_PMD_TOKEN_ECHO}/deliver.json`,
+    `https://core.spreedly.com/v1/receivers/${process.env.RECEIVER_TOKEN}/deliver.json`,
     "post",
     {
       delivery: {
         payment_method_token: token,
-        url: process.env.APP_RECEIVER_URL,
+        url: process.env.RECEIVER_URL,
         headers: "Content-Type: application/json",
         body: JSON.stringify({
           order_id: number,
@@ -141,8 +141,8 @@ function useApi(url, method, data = undefined) {
     method,
     withCredentials: true,
     auth: {
-      username: process.env.APP_ENV_KEY,
-      password: process.env.APP_ACCESS_SECRET
+      username: process.env.ENV_KEY,
+      password: process.env.ACCESS_SECRET
     },
     data
   });

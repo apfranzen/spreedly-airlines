@@ -13,7 +13,21 @@ The app has a decoupled front-end, written in `react`, and back-end written in `
 ### general
 
 1. `clone` this repo
-   > Note that local environment variables will need to be added to `./client/.env` as well as `./server/.env`
+2. create `./server/.env` file and add the following keys:
+
+```
+ENV_KEY=<create_own>
+ACCESS_SECRET=<create_own>
+GATEWAY_TOKEN=<create_own>
+RECEIVER_TOKEN=<create_own>
+RECEIVER_URL=<create_own>
+```
+
+3. create `./client/.env` file and add the following keys:
+
+```
+REACT_APP_ENV_KEY=<create_own> - note this will be the same ENV_KEY from server .env
+```
 
 ### front-end
 
